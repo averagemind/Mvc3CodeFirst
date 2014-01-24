@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Mvc3CodeFirst.Models.Activity>
+
+@{
+    // these string resources could come from a more organized source for maintainabilities
+    var viewsTooltip = "This will allow user to view current viewers, so he/she knows who else is interested in the subject";
+    var commentsTooltip = "This will allow user to view current comments and enter new comment";
+    var voteTooltip = "This will allow user to view current voters and enter a vote";
+}
+
+<div data-id="ActivityStream">
+    <div class="section-title large">
+        <h3>Recent Activities</h3>
+    </div>
+    <ul>
+    @foreach (var item in Model) {
+        <li data-type="row">
+            <div>
+                <b>@item.Name</b>
+            </div>
+            <div>@Html.Raw(item.Description)</div>
+            <div data-type="action" class="action-container">
+                <span data-type="label" title="@viewsTooltip"> <i class="fa fa-eye"></i>@item.ViewCounts views</span>
+                <span data-type="label" title="@commentsTooltip"> <i class="fa fa-comment"></i>@item.CommentCounts comments</span>
+                <span data-type="label" title="@voteTooltip"> <i class="fa fa-thumbs-up"></i>@item.LikertScale votes</span>
+            </div>
+        </li>
+    }
+    </ul>
+</div>

@@ -1,0 +1,62 @@
+﻿@model Mvc3CodeFirst.Models.Student
+
+@Html.Partial("ProfilePhoto", Model)
+
+<div data-type="form-container">
+
+    <fieldset>
+        <legend>Student</legend>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Name)
+        </div>
+
+        <div class="display-label">
+            <label>Position/Title</label>
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Seniority)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Affiliation)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Affiliation)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.City)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.City)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.State)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.State)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Zip)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Zip)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId })
+    </p>
+</div>

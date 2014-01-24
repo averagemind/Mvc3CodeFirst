@@ -1,0 +1,71 @@
+﻿<div data-id="About" class="first-line">
+
+
+    <p>
+        This website is built on ASP .NET MVC 3 and Entity Framework 5
+        in response to <a href="http://careers.stackoverflow.com/jobs/45749/c-sharp-asp-net-mfc-3-developer-implement-next-gen-washington-state-university" title="RFQ Info on Stackoverflow">"RFQ NO. 1770-GC21202, C#, ASP. NET, MFC 3 Developer: implement next-gen social programming environment"</a>.
+    </p>
+
+    <p>
+        The site is deployed on Windows Azure with a SQL Azure database created through Entity Framework code first approach.
+        The database is seeded with a few records for demo purposes.
+        The actual data could be collected from Visual Studio events and public data sources.
+        <a href="http://fontawesome.io/icons/" title="Icon List">Font Awesome Icons</a> are used to make
+        <a href="/Home/Index">Dashboard</a>,
+        <a href="/Home/Thumbnails">Thumbnail</a>,
+        and <a href="/Home/Tabular">Tabular</a> views look nicer,
+        but this requires a modern browser like Chrome, Firefox, or IE 10 (my apologies).
+    </p>
+
+    <div>
+        The site has 5 main views:
+        <ol>
+            <li>
+                <a href="/Home/About">About</a>
+                <p>
+                    This includes a brief introduction on the site and the technologies applied.
+                </p>
+            </li>
+            <li>
+                <a href="/Home/Index">Dashboard</a>
+                <p>
+                    This view shows students the information on the related programming activities and community events.
+                    The activities are seeded records in the database.
+                    The goal of this view is to help students get connected effectively and efficiently.
+                    Students can learn about others who are involved in a topic and add comments or submit up votes.
+                    Hover over an activity entry, and the list of actions will appear.
+                </p>
+            </li>
+            <li>
+                <a href="/Home/Thumbnails">Thumbnail</a>
+                <p>
+                    This view could fit in Visual Studio as a helper or peer recommendation list based on the activities inside IDE.
+                    The thumbnail list is populated with the real-time data in the database.
+                </p>
+            </li>
+            <li>
+                <a href="/Home/Tabular">Tabular</a>
+                <p>
+                    The target users of this view could be the administrative staff.
+                    Create, edit, and delete actions will update the database and the updated results will appear in the tabular and thumbnail views.
+                </p>
+            </li>
+            <li>
+                <a href="/Home/Linkout">Screenshots</a>
+                <p>
+                    This is a repository page that includes some of the work I have done in the past.
+                </p>
+            </li>
+        </ol>
+    </div>
+
+    <div data-id="Linkout">
+        The entire application is relatively small. Below are the screenshots of a few code snippets.
+        <ul>
+            <li>
+                <img src="../../Images/CodeSnippets1.png" alt="Code Snippets" title="Sample code snippets of this application" />
+                <img src="../../Images/CodeSnippets2.png" alt="Code Snippets" title="Sample code snippets of this application" />
+            </li>
+        </ul>
+    </div>
+</div>

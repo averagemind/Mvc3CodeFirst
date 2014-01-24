@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Mvc3CodeFirst.Models.Student>
+<div data-id="Thumbnails" class="first-line">
+    <div id="mainbar-thumb">
+        <div>
+            <p>The thumbnail list on the right could be used as dockable tab inside Visual Studio.</p>
+            <p>Based on the IDE environment context (Visual Studio events), the user could be:</p>
+            <ol>
+                <li>Checking online resources</li>
+                <li>Getting the same compiling error over and over again</li>
+                <li>Struggling with project settings and having runtime issues</li>
+                <li>Writting the same code snippets all over the places</li>
+                <li>Generating inefficient executables</li>
+                <li>&nbsp; ... &nbsp;</li>
+            </ol>
+            <p>In these scenarios a list of people who had similar experiences would be available and the user could email or messaging to them. The user could also enter an up vote for these people.</p>
+            <p>When Visual Studio "senses" the user is unfamiliar with the IDC commands and shortcuts, a list of relavent command shortcuts could also be popped as a toast inside the IDE.</p>
+        </div>
+        <div>
+            <img src="../../Images/Visual Studio.png" alt="Visual Studio Plug-in" title="Visual Studio Plug-in" />
+        </div>
+    </div>
+
+    <table class="thumbnails">
+        @foreach (var item in Model)
+        {
+            var imgPath = item.StudentId > 9 ? "u_n.jpg" : string.Format("u_{0}.jpg", item.StudentId);
+            <tr data-type="row">
+                <td>
+                    <img src="/Images/SampleUsers/@imgPath"
+                        alt="Photo of @item.Name"
+                        title="Photo of @item.Name. Click to view profile.">
+                </td>
+                <td>
+                    <div class="heavy">@item.Name</div>
+                    <div>@item.Seniority</div>
+                    <div>@item.Affiliation</div>
+                    <div>@item.City, @item.State @item.Zip</div>
+                    <div>@item.Email</div>
+                    <div data-type="action" class="action-container">
+                        <a class="fa fa-envelope" href="mailto:@item.Email" title="Email to @item.Name"></a>
+                        <a class="fa fa-comment-o" href="#" title="Messaging @item.Name"></a>
+                        <a class="fa fa-thumbs-up" href="#" title="Like @item.Name"></a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </table>
+
+</div>

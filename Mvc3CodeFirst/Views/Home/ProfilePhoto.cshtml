@@ -1,0 +1,7 @@
+﻿@model Mvc3CodeFirst.Models.Student
+
+<div data-type="profile-photo-container" class="first-line">
+    <img src="/Images/SampleUsers/@string.Format("u_{0}.jpg", Model.StudentId)"
+        alt="Photo of @Model.Name"
+        title="Photo of @Model.Name">
+</div>

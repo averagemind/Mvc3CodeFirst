@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Mvc3CodeFirst.Models.Activity>
+
+<div data-id="Home">
+    <div id="mainbar">@Html.Partial("ActivityStream", Model)</div>
+    <div id="sidebar">    
+        @Html.Partial("Announcement")
+        @Html.Partial("ActivitySummary", Model)
+    </div>
+</div>

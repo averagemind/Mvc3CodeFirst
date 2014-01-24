@@ -1,0 +1,487 @@
+﻿html {
+    background-color: #e2e2e2;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    border-top: solid 10px #990000;
+    color: #333;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #333;
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+}
+
+a[class*="fa-"], ul#menu li a.active, .fa {
+    color: #900;
+    text-decoration: none;
+}
+
+a:hover, .hover {
+    color: #999;
+    cursor: pointer;
+}
+
+a > span {
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    font-size: 1em;
+}
+
+header, footer, hgroup,
+nav, section {
+    display: block;
+}
+
+mark {
+    background-color: #a6dbed;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-fix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+    h5 a:link, h5 a:visited, h5 a:active {
+        padding: 0;
+        text-decoration: none;
+    }
+
+
+/* main layout
+----------------------------------------------------------*/
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+#body {
+    clear: both;
+    padding-bottom: 35px;
+}
+
+header .content-wrapper {
+    padding-top: 20px; 
+}
+
+footer {
+    clear: both;
+    background-color: #e2e2e2;
+    font-size: .8em;
+    height: 50px;
+}
+
+/* menu
+----------------------------------------------------------*/
+ul#menu {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 5px;
+    padding: 0;
+    text-align: right;
+}
+
+    ul#menu li {
+        display: inline;
+        list-style: none;
+        padding-left: 15px;
+    }
+
+        ul#menu li a {
+            background: none;
+            color: #333;
+            text-decoration: none;
+        }
+
+        ul#menu li a:hover {
+            color: #999;
+            text-decoration: none;
+        }
+
+
+/* page elements
+----------------------------------------------------------*/
+
+/* page titles */
+hgroup.title {
+    margin-bottom: 10px;
+}
+
+hgroup.title h1, hgroup.title h2 {
+    display: inline;
+}
+
+hgroup.title h2 {
+    font-weight: normal;
+    margin-left: 3px;
+}
+
+/* features */
+section.feature {
+    width: 300px;
+    float: left;
+    padding: 10px;
+}
+
+/* content */
+article {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    float: right;
+    width: 25%;
+}
+
+    aside ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        aside ul li {
+            background: url("../Images/bullet.png") no-repeat 0 50%;
+            padding: 2px 0 2px 20px;
+        }
+
+.label {
+    font-weight: 700;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+label.checkbox {
+    display: inline;
+}
+
+/* info and errors */
+.message-info {
+    border: 1px solid;
+    clear: both;
+    padding: 10px 20px;
+}
+
+.message-error {
+    clear: both;
+    color: #e80c4d;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.message-success {
+    color: #7ac0da;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.error {
+    color: #e80c4d;
+}
+
+
+/* tables
+----------------------------------------------------------*/
+table.tabular  {
+    border-top: 1px solid #900;
+    border-left: 1px solid #900;
+}
+
+.tabular th {
+    padding: .3em .667em;
+    background: #900;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #fff;
+    border-bottom: 1px solid #900;
+    border-right: 1px solid #900;
+}
+
+.tabular td {
+    padding: .667em;
+    vertical-align: top;
+    border-bottom: 1px solid #900;
+    border-right: 1px solid #900;
+}
+
+td a[class^="fa-"] {
+    padding-left: 15px;
+}
+
+.tabular tr {
+    height: 50px;
+}
+
+.heavy {
+    font-weight: bold;
+}
+
+td.cmd-group {
+    width: 120px;
+    text-align:center;
+}
+
+.first-line {
+    margin-top: 3.75em;
+}
+
+#mainbar-thumb  {
+    float: left;
+    width: 555px;
+}
+
+#mainbar-thumb img, [data-id="Linkout"] img {
+    width: 550px;
+}
+
+.thumbnails {
+    float: right;
+    width: 195px;
+}
+
+.thumbnails tr td:first-child{
+    padding: 10px;
+    vertical-align: top;
+}
+
+.thumbnails tr td:first-child img {
+    border: 1px solid #999;
+    padding: 2px;
+    width: 80px;
+}
+
+.thumbnails tr td:last-child, .thumbnails tr td:last-child > div:last-child{
+    padding: 5px;
+    vertical-align: top;
+    width: 115px;
+}
+
+/* custom styles
+----------------------------------------------------------*/
+ul {
+    padding-left: 10px;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 10px
+}
+
+[data-type="label"] {
+    margin-right: 15px;
+}
+
+span[data-type="label"] i {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+#mainbar, .mainbar {
+    float: left;
+    margin-bottom: 40px;
+    width: 735px;
+}
+
+#sidebar, .sidebar {
+    overflow: hidden;
+    float: right;
+    margin-top: 65px;
+    margin-bottom: 60px;
+    margin-left:15px;
+    width: 200px;
+}
+
+#sidebar div, .sidebar div {
+    margin-top: 5px;
+}
+
+.section-title {
+    background-color: #900;
+    font-family: "Quattrocento Sans",sans-serif;
+    margin-top: 15px;
+
+    background-image: -webkit-gradient(
+	    linear,
+	    right top,
+	    left bottom,
+	    color-stop(0, #FFFFFF),
+	    color-stop(1, #900000)
+    );
+    background-image: -o-linear-gradient(left bottom, #FFFFFF 0%, #900000 100%);
+    background-image: -moz-linear-gradient(left bottom, #FFFFFF 0%, #900000 100%);
+    background-image: -webkit-linear-gradient(left bottom, #FFFFFF 0%, #900000 100%);
+    background-image: -ms-linear-gradient(left bottom, #FFFFFF 0%, #900000 100%);
+    background-image: linear-gradient(to left bottom, #FFFFFF 0%, #900000 100%);
+}
+
+.section-title h3 {
+    margin:0;
+    padding:0;
+    color: #fff;
+}
+
+.large {
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+.action-container {
+    visibility: hidden;
+}
+
+fieldset {
+    margin-top: 10px;
+    padding:30px;
+    border: 1px solid #900;
+}
+
+ fieldset div.editor-field
+,fieldset div.display-field {
+    margin-bottom: 20px;
+}
+
+[data-type="profile-photo-container"] {
+    margin-bottom: 20px;
+}
+
+[data-type="form-container"] {
+    margin-bottom: 30px;
+}
+
+
+/********************
+*   Mobile Styles   *
+********************/
+@media only screen and (max-width: 850px) {
+
+    /* header
+    ----------------------------------------------------------*/
+    header .float-left,
+    header .float-right {
+        float: none;
+    }
+
+    /* menu */
+    nav {
+        margin-bottom: 5px;
+    }
+
+    ul#menu {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+        ul#menu li {
+            margin: 0;
+            padding: 0;
+        }
+
+
+    /* main layout
+    ----------------------------------------------------------*/
+
+    .content-wrapper {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    /* page content */
+    article, aside {
+        float: none;
+        width: 100%;
+    }
+
+     /* features */
+     section.feature {
+        float: none;
+        padding: 10px;
+        width: auto;
+     }
+
+        section.feature img {
+            color: #999;
+            content: attr(alt);
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+    /* forms */
+    input {
+        width: 90%;
+    }
+
+    /* footer
+    ----------------------------------------------------------*/
+    footer .float-left,
+    footer .float-right {
+        float: none;
+    }
+
+    footer {
+        text-align: center;
+        height: auto;
+        padding: 10px 0;
+    }
+
+        footer p {
+            margin: 0;
+        }
+}

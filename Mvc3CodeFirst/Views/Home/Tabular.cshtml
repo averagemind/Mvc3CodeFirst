@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Mvc3CodeFirst.Models.Student>
+
+<div data-id="Tabular" class="first-line">
+    <p>
+        All links on this page are active. They demonstrate that the application is supported by a live SQL Server database in the cloud.
+        The target users of this view could be the administrators, moderators, or professors who manage the system.
+        <br /><br />
+        <a class="fa fa-plus-circle" href="/Home/Create" title="Create New"><span>&nbsp;&nbsp;Create a New Record</span></a>
+    </p>
+
+    <table class="tabular">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Affiliation
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                State
+            </th>
+            <th>
+                Zip
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                <b>@Html.DisplayFor(modelItem => item.Name)</b>
+            </td>
+            <td>
+                <b>@Html.DisplayFor(modelItem => item.Seniority)</b>
+                <br />
+                @Html.DisplayFor(modelItem => item.Affiliation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td data-type="action" class="cmd-group">
+                <a class="fa fa-pencil" href="/Home/Edit/@item.StudentId" title="Edit @string.Format("{0}'s", item.Name) Profile"></a>
+                <a class="fa fa-file" href="/Home/Details/@item.StudentId" title="View Details about @item.Name"></a>
+                <a class="fa fa-minus-circle" href="/Home/Delete/@item.StudentId" title="Delete @string.Format("{0}'s", item.Name) Profile"></a>
+            </td>
+        </tr>
+    }
+
+    </table>
+
+</div>

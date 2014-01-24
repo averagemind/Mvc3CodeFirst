@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>AppCoders</title>
+    <link href="/favicon.png" rel="shortcut icon" type="image" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="../../Content/site.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/font-awesome-4.0.3/css/font-awesome.css">
+    <script type="text/javascript" src="../../Scripts/modernizr-2.5.3.js"></script>
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-right">
+                <nav>
+                    <ul id="menu">
+                        <li id="Home">@Html.ActionLink("Dashboard", "Index", "Home", new { @title = "A sample of dashboard view" })</li>
+                        <li id="Thumbnails">@Html.ActionLink("Thumbnail", "Thumbnails", "Home", new { @title = "A sample of thumbnail list view" })</li>
+                        <li id="Tabular">@Html.ActionLink("Tabular", "Tabular", "Home", new { @title = "A sample of tabular view" })</li>
+                        <li id="About"><a href="/Home/About" title="View descriptions about this sample app">About</a></li>
+                        <li id="Linkout"><a href="/Home/Linkout" title="View my work sample screenshots">Screenshots</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        <section class="content-wrapper clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - AppCoders&trade; Mvc3 and Entity Framework CodeFirst Sample Application</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../../Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/SampleSiteScripts.js"></script>
+</body>
+</html>

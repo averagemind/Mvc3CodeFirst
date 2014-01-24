@@ -1,0 +1,69 @@
+﻿@model Mvc3CodeFirst.Models.Student
+
+@Html.Partial("ProfilePhoto", Model)
+
+<div data-type="form-container">
+
+    <h3>Are you sure you want to delete this?</h3>
+    <fieldset>
+        <legend>Student</legend>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Name)
+        </div>
+
+        <div class="display-label">
+            <label>Position/Title</label>
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Seniority)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Affiliation)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Affiliation)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.City)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.City)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.State)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.State)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Zip)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Zip)
+        </div>
+
+        <div class="display-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+    </fieldset>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <p>
+            <input type="submit" value="Delete" />
+        </p>
+    }
+
+</div>
